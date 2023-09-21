@@ -7,7 +7,7 @@ export default function Posts() {
 
 	useEffect(() => {
 		async function getAllPosts() {
-			const res = await axios.post("http://localhost:5000/posts")
+			const res = await axios.post("https://cron-xca9.onrender.com/posts")
 			postsSet(res.data)
 		}
 		getAllPosts()
