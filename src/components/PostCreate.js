@@ -12,7 +12,7 @@ export default function PostCreate() {
 		const formData = new FormData();
 		formData.append('img', file);
 
-		axios.post("https://cron-xca9.onrender.com/create", formData, {
+		axios.post("https://cron-gybv.onrender.com/create", formData, {
 			headers: {
 				'Content-Type': 'multipart/form-data', // Important for sending files
 			},
