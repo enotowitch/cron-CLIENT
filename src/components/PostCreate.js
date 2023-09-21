@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { useState } from 'react';
+import { SERVER_URL } from '../consts';
 
 export default function PostCreate() {
 
@@ -12,7 +13,7 @@ export default function PostCreate() {
 		const formData = new FormData();
 		formData.append('img', file);
 
-		axios.post("https://cron-gybv.onrender.com/create", formData, {
+		axios.post(`${SERVER_URL}/create`, formData, {
 			headers: {
 				'Content-Type': 'multipart/form-data', // Important for sending files
 			},

@@ -1,5 +1,6 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
+import { SERVER_URL } from '../consts'
 
 export default function Posts() {
 
@@ -7,7 +8,7 @@ export default function Posts() {
 
 	useEffect(() => {
 		async function getAllPosts() {
-			const res = await axios.post("https://cron-gybv.onrender.com/posts")
+			const res = await axios.post(`${SERVER_URL}/posts`)
 			postsSet(res.data)
 		}
 		getAllPosts()
